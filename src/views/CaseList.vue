@@ -11,7 +11,7 @@
               :key="item.title"
               avatar
               ripple
-              :to="`/cases/${item.title}`"
+              :to="`/cases/${item.title}/documents`"
             >
               <v-list-tile-avatar :color="item.color">
                 <v-icon class="green white--text">folder</v-icon>

@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Clients from './views/Clients.vue'
 import CaseList from './views/CaseList.vue'
 import DocumentList from './views/DocumentList.vue'
+import DateList from './views/DateList.vue'
+import ContactList from './views/ContactList.vue'
 
 Vue.use(Router)
 
@@ -30,10 +32,42 @@ export default new Router({
       }
     },
     {
-      path: '/cases/:id',
+      path: '/cases/:id/documents',
       name: 'cases',
       props: true,
       component: DocumentList,
+      meta: {
+        title: ':id',
+        value: 'clients',
+        back: true,
+        more: [
+          'documents',
+          'contacts',
+          'calendar'
+        ]
+      }
+    },
+    {
+      path: '/cases/:id/calendar',
+      name: 'cases',
+      props: true,
+      component: DateList,
+      meta: {
+        title: ':id',
+        value: 'clients',
+        back: true,
+        more: [
+          'documents',
+          'contacts',
+          'calendar'
+        ]
+      }
+    },
+    {
+      path: '/cases/:id/contacts',
+      name: 'cases',
+      props: true,
+      component: ContactList,
       meta: {
         title: ':id',
         value: 'clients',
