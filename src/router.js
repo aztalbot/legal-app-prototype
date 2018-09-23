@@ -6,6 +6,7 @@ import DocumentList from './views/DocumentList.vue'
 import DateList from './views/DateList.vue'
 import ContactList from './views/ContactList.vue'
 import RecentCases from './views/RecentCases.vue'
+import Timer from './views/Timer.vue'
 
 Vue.use(Router)
 
@@ -87,6 +88,15 @@ export default new Router({
       meta: {
         title: 'Recent Cases',
         value: 'recent'
+      }
+    },
+    {
+      path: '/timer',
+      name: 'timer',
+      component: Timer,
+      meta: {
+        title: 'Timer',
+        value: 'timer'
       }
     }
   ]

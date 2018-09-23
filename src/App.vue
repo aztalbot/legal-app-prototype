@@ -64,6 +64,7 @@
         color="teal"
         flat
         value="timer"
+        :to="`/timer`"
       >
         <span>Timer</span>
         <v-icon>hourglass_empty</v-icon>
