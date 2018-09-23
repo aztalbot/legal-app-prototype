@@ -55,7 +55,7 @@ export default {
   computed: {
     time () {
       return this.startTime !== null
-        ? new Date(this.now.getTime() - this.startTime.getTime() + this.accumulated.getTime() + new Date(1000000).getTime())
+        ? new Date(this.now.getTime() - this.startTime.getTime() + this.accumulated.getTime())
         : new Date(0)
     }
   },
