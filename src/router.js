@@ -37,7 +37,12 @@ export default new Router({
       meta: {
         title: ':id',
         value: 'clients',
-        back: true
+        back: true,
+        more: [
+          'documents',
+          'contacts',
+          'calendar'
+        ]
       }
     }
   ]
