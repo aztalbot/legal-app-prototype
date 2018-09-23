@@ -23,8 +23,9 @@ export default new Router({
       props: true,
       component: CaseList,
       meta: {
-        title: 'Cases',
-        value: 'clients'
+        title: ':id',
+        value: 'clients',
+        back: true
       }
     },
     {

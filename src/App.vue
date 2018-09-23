@@ -7,7 +7,10 @@
       dark
       prominent
     >
-      <v-toolbar-title v-text="$route.meta.title"></v-toolbar-title>
+      <v-btn @click="$router.go(-1)" icon v-if="$route.meta.back">
+        <v-icon>arrow_back</v-icon>
+      </v-btn>
+      <v-toolbar-title v-text="title"></v-toolbar-title>
     </v-toolbar>
     <!-- CONTENT -->
     <v-content>
@@ -53,6 +56,11 @@ export default {
   computed: {
     bottomNav () {
       return this.$route.meta.value
+    },
+    title () {
+      return this.$route.meta.title.startsWith(':')
+        ? this.$route.params[this.$route.meta.title.slice(1)]
+        : this.$route.meta.title
     }
   }
 }

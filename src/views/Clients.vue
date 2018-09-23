@@ -9,7 +9,7 @@
               :key="item.title"
               avatar
               ripple
-              :to="`clients/${item.id}`"
+              :to="`clients/${item.title}`"
             >
               <v-avatar :color="item.color">
                 <span class="white--text headline">{{ item.title.charAt(0) }}</span>
@@ -54,8 +54,7 @@ export default {
       items: [
         {
           title: 'Dominion Energy',
-          color: 'red',
-          id: 'dominion_energy'
+          color: 'red'
         },
         {
           title: 'Ford Motors',
