@@ -1,29 +1,59 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="vuetify-app">
+    <!-- TOOLBAR -->
+    <v-toolbar
+      app
+      color="teal"
+      dark
+      prominent
+    >
+      <v-toolbar-title v-text="$route.meta.title"></v-toolbar-title>
+    </v-toolbar>
+    <!-- CONTENT -->
+    <v-content>
+      <router-view/>
+    </v-content>
+    <v-bottom-nav
+      :active="bottomNav"
+      :value="true"
+      absolute
+      color="transparent"
+    >
+      <v-btn
+        color="teal"
+        flat
+        value="clients"
+      >
+        <span>Clients & Cases</span>
+        <v-icon>gavel</v-icon>
+      </v-btn>
+      <v-btn
+        color="teal"
+        flat
+        value="recent"
+      >
+        <span>Recent Cases</span>
+        <v-icon>history</v-icon>
+      </v-btn>
+      <v-btn
+        color="teal"
+        flat
+        value="timer"
+      >
+        <span>Timer</span>
+        <v-icon>hourglass_empty</v-icon>
+      </v-btn>
+    </v-bottom-nav>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  name: 'App',
+  computed: {
+    bottomNav () {
+      return this.$route.meta.value
     }
   }
 }
-</style>
+</script>
