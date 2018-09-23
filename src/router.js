@@ -5,6 +5,7 @@ import CaseList from './views/CaseList.vue'
 import DocumentList from './views/DocumentList.vue'
 import DateList from './views/DateList.vue'
 import ContactList from './views/ContactList.vue'
+import RecentCases from './views/RecentCases.vue'
 
 Vue.use(Router)
 
@@ -77,6 +78,15 @@ export default new Router({
           'contacts',
           'calendar'
         ]
+      }
+    },
+    {
+      path: '/recent-cases',
+      name: 'recent',
+      component: RecentCases,
+      meta: {
+        title: 'Recent Cases',
+        value: 'recent'
       }
     }
   ]

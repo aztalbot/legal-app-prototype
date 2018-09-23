@@ -46,6 +46,7 @@
         color="teal"
         flat
         value="clients"
+        :to="`/clients`"
       >
         <span>Clients & Cases</span>
         <v-icon>gavel</v-icon>
@@ -54,6 +55,7 @@
         color="teal"
         flat
         value="recent"
+        :to="`/recent-cases`"
       >
         <span>Recent Cases</span>
         <v-icon>history</v-icon>
