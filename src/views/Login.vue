@@ -12,7 +12,7 @@
         <v-flex xs12 sm6>
           <v-text-field
             v-model="email"
-            label="E-mail"
+            label="Username or E-mail"
           ></v-text-field>
         </v-flex>
 
@@ -22,7 +22,7 @@
             :append-icon="show1 ? 'visibility_off' : 'visibility'"
             :type="show1 ? 'text' : 'password'"
             name="input-10-1"
-            label="Normal with hint text"
+            label="Password"
             hint="At least 8 characters"
             counter
             @click:append="show1 = !show1"
