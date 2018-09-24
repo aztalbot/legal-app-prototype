@@ -6,6 +6,7 @@
       color="teal"
       dark
       prominent
+      v-if="!$route.meta.noToolbar"
     >
       <v-btn @click="$router.go(-1)" icon v-if="$route.meta.back">
         <v-icon>arrow_back</v-icon>
@@ -41,6 +42,7 @@
       :value="true"
       absolute
       color="transparent"
+      v-if="!$route.meta.noToolbar"
     >
       <v-btn
         color="teal"

@@ -7,12 +7,21 @@ import DateList from './views/DateList.vue'
 import ContactList from './views/ContactList.vue'
 import RecentCases from './views/RecentCases.vue'
 import Timer from './views/Timer.vue'
+import Login from './views/Login.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     { path: '/', redirect: '/clients' },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+      meta: {
+        noToolbar: true
+      }
+    },
     {
       path: '/clients',
       name: 'clients',
