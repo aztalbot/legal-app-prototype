@@ -7,6 +7,7 @@ import DateList from './views/DateList.vue'
 import ContactList from './views/ContactList.vue'
 import RecentCases from './views/RecentCases.vue'
 import Timer from './views/Timer.vue'
+import Timesheet from './views/Timesheet.vue'
 import Login from './views/Login.vue'
 
 Vue.use(Router)
@@ -99,13 +100,32 @@ export default new Router({
         value: 'recent'
       }
     },
+    { path: '/time', redirect: '/time/timer' },
     {
-      path: '/timer',
-      name: 'timer',
+      path: '/time/timer',
+      name: 'time',
       component: Timer,
       meta: {
-        title: 'Timer',
-        value: 'timer'
+        title: 'Time',
+        value: 'time',
+        more: [
+          'timesheet',
+          'timer'
+        ]
+      }
+    },
+    { path: '/timesheet', redirect: '/time/timesheet' },
+    {
+      path: '/time/timesheet',
+      name: 'timesheet',
+      component: Timesheet,
+      meta: {
+        title: 'Timesheet',
+        value: 'time',
+        more: [
+          'timesheet',
+          'timer'
+        ]
       }
     }
   ]

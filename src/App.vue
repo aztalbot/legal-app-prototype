@@ -65,8 +65,8 @@
       <v-btn
         color="teal"
         flat
-        value="timer"
-        :to="`/timer`"
+        value="time"
+        :to="`/time`"
       >
         <span>Timer</span>
         <v-icon>hourglass_empty</v-icon>
